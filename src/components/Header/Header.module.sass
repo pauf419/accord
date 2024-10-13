@@ -1,0 +1,184 @@
+.BlurActive
+    &::before 
+        transition: .2s all ease
+
+
+.HeaderAdaptiveContainer
+    transform: translateX(100%)
+    display: grid
+    align-content: space-between
+    position: fixed
+    top: 71px
+    right: 0
+    background: rgba(0, 8, 94, 0.2)
+    z-index: 1002
+    width: 100%
+    padding: 2rem
+    gap: 1rem
+    height: calc(100vh - 71px)
+    transition: .2s all ease
+    backdrop-filter: blur(6px)
+    -webkit-backdrop-filter: blur(4px)
+    border-top: 1px solid #daa721
+
+    .HeaderLinks
+        display: grid
+        gap: 2rem
+
+        a
+            color: #fff
+            text-decoration: none
+
+    .HeaderCredits
+        display: flex
+        justify-content: center
+        gap: 1rem
+        svg 
+            width: 36px 
+            height: 36px
+            fill: #fff
+
+    &.Active
+        transform: translateX(0)
+
+.HeaderWrapper
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: space-around
+    padding: 1rem 0
+    align-items: center
+    transition: .2s all ease
+    z-index: 1002
+
+    &.Scrolled
+        position: fixed
+        backdrop-filter: blur(4px)
+        -webkit-backdrop-filter: blur(4px)
+        background: rgba(0, 0, 0, 0.4)
+
+    &.ScrolledBlurred
+        position: fixed
+        backdrop-filter: blur(4px)
+        -webkit-backdrop-filter: blur(4px)
+        background: rgba(0, 8, 94, 0.2)
+
+    &.BlurActive
+        background: rgba(0, 8, 94, 0.2)
+        backdrop-filter: blur(4px)
+        -webkit-backdrop-filter: blur(4px)
+    
+        
+
+
+    .BurgerBtn
+        display: none
+        transform: translateY(0)
+        width: 30px
+        height: 20px
+        cursor: pointer
+        
+
+        span 
+            width: 100%
+            transition: .5s all cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            height: 2px
+            background: #fff
+            position: absolute
+            right: 0
+            left: 0
+            margin: 0 auto
+            transform: rotate(0)
+
+            &:nth-child(1) 
+                top: 0
+            
+            &:nth-child(2) 
+                top: 44%
+                width: 60%
+            
+            &:nth-child(3) 
+                bottom: 0
+            
+        
+        &.active 
+            span 
+                &:nth-child(1) 
+                    top: 9px
+                    transform: rotate(-45deg)
+                
+                &:nth-child(2) 
+                    width: 0%
+                
+                &:nth-child(3) 
+                    bottom: 9px
+                    transform: rotate(45deg)
+
+    .HeaderNav
+        display: flex
+        gap: 1rem
+        font-size: 14px
+
+        a
+            text-decoration: none
+
+            cursor: pointer
+            position: relative
+
+            &:hover 
+                &:before
+                    width: 100%
+            
+            &:before
+                content: " "
+                position: absolute
+                bottom: -2px
+                width: 20px
+                transition: .4s all ease
+                height: 1px
+                background-color: #daa721
+
+    .HeaderCredits
+        display: flex 
+        gap: 1rem
+
+        .CreditsBtn 
+            cursor: pointer
+            transition: .2s all ease 
+
+            svg 
+                fill: #fff 
+                width: 24px 
+                height: 24px
+                transition: .2s all ease
+
+            &:hover 
+                transform: scale(1.1)
+                svg
+                    
+                    fill: #daa721
+
+                
+@media screen and (max-width: 1140px) 
+    .HeaderWrapper
+
+        justify-content: space-between
+        padding: 1rem 2rem
+        .BurgerBtn
+            display: block
+
+        .HeaderNav
+            display: none 
+
+        .HeaderCredits
+            display: none
+
+        .ToolbarContent
+            .ImgLayout 
+                .Column
+                    max-height: 100%
+                    display: grid
+
+                    img
+                        height: 50vh
+                        width: 100vw

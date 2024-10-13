@@ -1,0 +1,439 @@
+
+.RootPageWrapper
+    display: grid 
+
+
+    .WelcomeContainer 
+        height: 100vh
+        position: relative
+        overflow: hidden
+
+        .ImpulseSvg
+            position: absolute
+            left: -150px
+            width:600px
+            transform: rotateZ(-25deg)
+            top: 0%
+            z-index: 1000
+
+        .Content 
+            width: 100% 
+            height: 100vh
+            display: grid
+            justify-items: start
+            align-items: center
+            align-content: center
+            gap: 1rem
+            padding: 1.5rem
+            top: 0
+            position: absolute
+            z-index: 1001
+            color: #fff
+
+            h1
+                font-size: 28px
+                font-style: italic
+                color: #fff
+            
+
+        .Slide
+            height: 100%
+            background-size: cover
+            position: relative
+            background-position: bottom
+
+            .Blurer 
+                position: absolute 
+                width: 100% 
+                height: 100% 
+                background: rgba(0,0,0, .3)
+                backdrop-filter: blur(0px)
+
+
+            &.Slide0
+                background-image: url(https://i.ibb.co/Vx5Xr7M/image.png)
+
+            &.Slide1
+                background-image: url(https://i.ibb.co/hmFDzD5/image.png)
+
+            &.Slide2
+                background-image: url(https://i.ibb.co/x8vm1NX/image.png)
+                background-position: center
+
+            &.Slide3
+                background-image: url(https://i.ibb.co/NnPwc0v/image.png)
+                background-position: center
+
+            &.Slide4
+                background-image: url(https://i.ibb.co/BGGpRFm/image.png)
+                background-position: center
+    .ProductsContainer 
+        position: relative
+        z-index: 1000
+
+        .Products 
+            margin: 1rem
+            margin-top: calc(-91px)
+            display: grid
+            gap: 1rem
+
+            .ProductLink 
+                width: 100%
+                padding: 2rem
+                display: grid
+                gap: 1rem
+                background: #131314
+                color: #fff
+                position: relative
+                
+                .Edge
+                    position: absolute
+                    top: 15px
+                    left: 15px
+
+                .ProductTitle 
+                    font-weight: bold 
+                    font-size: 24px
+
+                .ProductCont 
+                    display: flex
+                    align-items: center 
+                    gap: .5rem
+                    font-style: italic
+
+
+                    svg 
+                        margin-top: 3px
+                        
+                        path 
+                            stroke: #daa721
+
+    .AboutContainer
+        background-color: #131314
+        padding: 3rem
+        display: grid 
+        gap: 1rem 
+        align-content: start
+        font-size: 14px
+        position: relative
+
+        .AboutTitle 
+            h1 
+                color: #fff
+
+        .AboutContext 
+            display: grid 
+            gap: 1rem
+            justify-items: start
+
+            h2 
+                color: #fff
+
+            p
+                color: #fff
+        
+            div 
+                border-color: #daa721
+
+            .Btn 
+                background: #daa721
+                color: #131314
+
+
+        .Dots
+            svg
+                width: 10px
+                height: 10px
+
+                rect 
+                    fill: #daa721
+        
+            &.DotLeftTop 
+                margin-top: 20px
+                margin-left: 20px
+
+            &.DotLeftBottom 
+                bottom: 0
+                margin-bottom: 20px
+                margin-left: 20px
+
+            &.DotRightTop 
+                right: 0
+                margin-top: 20px 
+                margin-right: 20px
+
+            &.DotRightBottom 
+                right: 0
+                bottom: 0
+                margin-bottom: 20px 
+                margin-right: 20px
+
+    .PurposesContainer 
+        display: grid 
+
+        .PurposesInfo
+            position: relative 
+            overflow: hidden
+            width: 100% 
+            display: grid 
+            gap: 3rem
+            padding-bottom: 3rem
+
+            .Border
+                position: absolute
+                right: -40%
+                top: -25%
+                transform: rotateZ(30deg)
+
+            .PurposesTitle 
+                padding-top: 3rem
+                padding-left: 3rem
+
+            .PurposesDesc 
+                padding: 0 3rem
+
+        .PurposesContent 
+            .PurposeContainer
+                padding: 2rem
+                padding-top: 3rem
+                min-height: 400px
+                display: grid 
+                align-content: space-between
+
+                .PurposeContent 
+                    display: grid 
+                    gap: 1.5rem
+
+                    .PurposeSub 
+                        list-style-position: inside
+
+                        li 
+
+                            &::marker
+                                color: #daa721
+
+
+
+                &.Purposenth0
+                    background: rgb(230, 230, 230)
+
+                &.Purposenth1
+                    background: #131314
+                    color: #fff
+
+                .PurposeNext
+                    display: flex
+                    align-items: center 
+                    gap: .5rem
+                    font-style: italic
+
+                    svg 
+                        margin-top: 3px
+                        
+                        path 
+                            stroke: #daa721
+
+    .PrepContainer 
+        .PrepTitle
+            display: flex 
+            justify-content: center   
+            padding: 3rem
+
+        .PrepContent 
+            display: grid     
+            justify-items: center
+            gap: 1rem
+            padding-bottom: 3rem
+            
+            .Prep 
+                background: #131314
+                margin: 0 .5rem
+                display: grid
+
+                .ImgBg
+                    width: 100%
+                    
+                    img 
+                        width: 100%
+
+                .PrepInfo
+                    padding: 1rem 2rem
+                    color: #fff
+                    display: grid
+                    gap: 1rem
+
+                    .Title 
+                        display: flex
+                        align-items: center
+                        gap: .5rem
+                        font-size: 18px
+                        color: #ffffffCD
+
+                        svg
+                            fill: #daa721
+                            width: 22px 
+                            height: 22px
+
+                    .Desc 
+            .dd 
+                margin-bottom: 1rem
+
+    .OrdContainer 
+        padding: 3rem
+        background: #131314
+        color: #fff
+
+        .OrdTitle
+            margin-bottom: 3rem
+            text-align: center
+
+        .OrdContent 
+            display: grid
+            justify-items: center
+            gap: 2rem
+            
+            .Separator
+                width: 150px
+                height: 2px
+                background: #daa721
+                opacity: .7
+
+            .PrivContainer 
+                justify-items: center
+                display: grid   
+                gap: 1rem
+
+                .PrivIcon 
+                    svg 
+                        fill: #daa721
+                        width: 64px
+                        height: 64px
+
+                .PrivDesc
+                    text-align: center
+                    font-size: 18px
+
+    .IndividualContainer
+        display: grid
+        padding-bottom: 3rem
+        
+        .Title 
+            padding: 3rem
+            padding-left: 2rem
+
+        .Ind 
+            display: grid
+            gap: 1rem
+            padding: 0 2rem
+            padding-bottom: 2rem
+            list-style-position: inside
+
+            .Info 
+                display: grid
+                grid-template-columns: 25px calc(100% - 25px)
+                align-items: center
+
+                .Square 
+                    width: 12px 
+                    height: 12px
+                    background: #daa721
+
+    .ContactsContainer 
+        display: grid
+        background: #131314
+        color: #fff
+        padding: 3rem
+        gap: 5rem
+
+        .ContactsContent 
+            display: grid
+            gap: 2rem
+            justify-items: center
+
+            .Light
+                text-align: center
+                color: #616161
+
+            .Contact 
+                display: grid
+                justify-items: center
+                gap: 2rem
+
+                .Icon 
+                    svg 
+                        width: 25px
+                        height: 25px
+                        fill: #daa721
+
+                strong
+                    font-weight: normal
+                    font-size: 20px
+                    color: #8a8a8a
+
+    .ContactContainer 
+        min-height: 60vh
+        display: grid 
+        align-content: center
+        justify-items: center
+        position: relative
+        overflow: hidden
+
+        h2 
+            margin-bottom: 1rem
+
+        .Arrow 
+            z-index: 2
+            position: absolute
+            right: -20%
+            width: 150%
+            height: 100%
+            bottom: -5%
+            opacity: .9
+        
+        .ContactContext 
+            padding: 2rem 0
+            z-index: 1001
+            display: grid
+            align-content: center
+            justify-items: start
+            gap: 1rem
+
+            h1
+                font-size: 40px
+                margin-bottom: 2rem
+
+            .InputOutline 
+                backdrop-filter: blur(3px)
+                background: rgba(0,0,0, .03)
+                width: 100%
+                border: 2px solid #daa721
+                display: flex
+                align-items: center
+                gap: .5rem
+                padding: .5rem
+
+                .Icon
+                    svg 
+                        display: block
+                        width: 20px
+                        height: 20px
+                        fill: #daa721
+
+                input 
+                    outline: none
+                    background: transparent
+                    border: none
+                    width:  250px
+                    transition: .2s all ease 
+
+
+
+
+        
+
+        
+
+            
+
+                
+                
