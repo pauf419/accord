@@ -6,6 +6,7 @@ function Header() {
     
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
     const [headerActive, setHeaderActive] = useState<boolean>(false)
+    const [activeList, setActiveList] = useState<number>(0)
 
     useEffect(() => {
         if(headerActive) document.body.style.overflow = "hidden";
@@ -30,12 +31,47 @@ function Header() {
             <div className={`${m.HeaderAdaptiveContainer} ${headerActive ? m.Active : ""}`}>
 
                 <div className={m.HeaderLinks}>
-                    <Link to="/">Главная</Link>
-                    <Link to="/">Каталог проектов</Link>
-                    <Link to="/">Цены</Link>
-                    <Link to="/">Фото</Link>
-                    <Link to="/">Как заказать</Link>
-                    <Link to="/">Контакты</Link>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>Главная</Link>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>О Компании</Link>
+                    <div className={`${m.ExtendedList} ${activeList === 1 ? m.Active : activeList === 0 ? "" : m.Inactive}`} onClick={() => activeList === 1 ? setActiveList(0) : setActiveList(1)}>
+                        <div className={m.Content}>
+                            <Link to="/">Каталог</Link>
+                            <button className={m.DropdownInnitiator}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="6.708" height="7.274" viewBox="0 0 6.708 7.274">
+                                    <path d="M4.092,6.969,6.708,4.353,6,3.646l-2.147,2.1V0h-1V5.793L.707,3.647,0,4.354,2.616,6.969a1.045,1.045,0,0,0,1.476,0" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div className={m.Dropdown}>
+                            <Link to="/">Мангальная зона / Уличная зона</Link>
+                            <Link to="/">Модульные здания</Link>
+                            <Link to="/">Быстровозводимые здания</Link>
+                            <Link to="/">Барнхаусы</Link>
+                        </div>
+                    </div>
+                    <div className={`${m.ExtendedList} ${activeList === 2 ? m.Active : activeList === 0 ? "" : m.Inactive}`} onClick={() => activeList === 2 ? setActiveList(0) : setActiveList(2)}>
+                        <div className={m.Content}>
+                            <Link to="/">Услуги</Link>
+                            <button className={m.DropdownInnitiator}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="6.708" height="7.274" viewBox="0 0 6.708 7.274">
+                                    <path d="M4.092,6.969,6.708,4.353,6,3.646l-2.147,2.1V0h-1V5.793L.707,3.647,0,4.354,2.616,6.969a1.045,1.045,0,0,0,1.476,0" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div className={m.Dropdown}>
+                            <Link to="/">Вентилируемые Фасады</Link>
+                            <Link to="/">Фасадное Остекление</Link>
+                            <Link to="/">Свайный фундамент</Link>
+                            <Link to="/">3D-Моделирование</Link>
+                            <Link to="/">Брендирование И Реклама</Link>
+                            <Link to="/">Выезд Специалиста</Link>
+                            <Link to="/">Бизнес Под Ключ</Link>
+                        </div>
+                    </div>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>Цены</Link>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>Доставка</Link>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>Сотрудничество</Link>
+                    <Link to="/" className={`${activeList !== 0 && m.DefInactive}`}>Контакты</Link>
                 </div>
                 
                 <div className={m.HeaderCredits}>

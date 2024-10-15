@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap')
+
+    
 .BlurActive
     &::before 
         transition: .2s all ease
@@ -10,24 +13,115 @@
     position: fixed
     top: 71px
     right: 0
-    background: rgba(0, 8, 94, 0.2)
+    background: #131314
     z-index: 1002
     width: 100%
     padding: 2rem
-    gap: 1rem
+    gap: 0rem
     height: calc(100vh - 71px)
     transition: .2s all ease
-    backdrop-filter: blur(6px)
     -webkit-backdrop-filter: blur(4px)
-    border-top: 1px solid #daa721
+    overflow: hidden
 
     .HeaderLinks
         display: grid
-        gap: 2rem
+        justify-items: start
+        gap: .5rem
+
+        .ExtendedList 
+            display: grid
+            align-items: center
+            gap: .5rem
+            transition: .2s all ease
+
+            .Content 
+                display: flex
+                align-items: center
+                gap: .5rem
+
+                .DropdownInnitiator
+                    margin-top: 7px
+                    padding: 0
+                    width: 24px
+                    height: 24px
+                    border-radius: 100px
+                    display: flex 
+                    justify-content: center
+                    align-items: center
+                    font-family: Arial, Helvetica, sans-serif
+                    background: #353535
+
+                    svg 
+                        transition: .2s all ease
+                        width: 6.708
+                        height: 7.274
+
+            .Dropdown 
+                overflow: hidden
+                height: 0px
+                display: grid 
+                align-items: center
+                opacity: 0
+                transition: .2s all ease
+
+                a
+                    transform: translateY(-100%)
+                    font-size: 16px
+
+                    &::before 
+                        display: none
+
+
+            &.Active
+
+                a
+                    &::before 
+                        transition: .2s all ease
+                        width: 160%
+                
+                .Dropdown 
+                    height: 200px
+                    opacity: 1
+
+                    a
+                        transform: translateY(0)
+
+                .Content 
+                    .DropdownInnitiator 
+                        svg
+                            transform: rotateZ(180deg)
+
+            &.Inactive
+                opacity: .5
+
+                a
+                    font-size: 20px!important
+        
+
 
         a
+            font-family: "Geologica", sans-serif!important
+            font-size: 40px
             color: #fff
             text-decoration: none
+            position: relative 
+            transition: .2s all ease
+
+            &.DefInactive
+                opacity: .5
+                font-size: 24px!important
+
+            &::before 
+                content: " "
+                position: absolute 
+                background: #daa721
+                left: -60%
+                width: 100%
+                bottom: -7px
+                height: 2px
+                transition: .2s all ease
+                transform: translateX(200%)
+
 
     .HeaderCredits
         display: flex
@@ -40,6 +134,20 @@
 
     &.Active
         transform: translateX(0)
+
+        .HeaderLinks
+            display: grid
+            gap: .5rem
+
+            a
+                font-family: "Geologica", sans-serif!important
+                font-size: 32px
+                color: #fff
+                text-decoration: none
+                position: relative 
+
+                &::before 
+                    transform: translateX(0)
 
 .HeaderWrapper
     position: absolute
@@ -61,10 +169,10 @@
         position: fixed
         backdrop-filter: blur(4px)
         -webkit-backdrop-filter: blur(4px)
-        background: rgba(0, 8, 94, 0.2)
+        background: #131314
 
     &.BlurActive
-        background: rgba(0, 8, 94, 0.2)
+        background: #131314
         backdrop-filter: blur(4px)
         -webkit-backdrop-filter: blur(4px)
     
