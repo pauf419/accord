@@ -1,0 +1,60 @@
+
+.MangalZonePageWrapper
+    .MangalZoneContent 
+        padding: 2rem
+        padding-top: 4rem
+        display: grid 
+        gap: 2rem
+        .MangalZoneTitle 
+            h1 
+                font-size: 45px
+
+        img 
+            width: 100%
+
+        .Prefix 
+            font-weight: 600 
+            position: relative
+            padding-left: .7rem
+
+            &::before 
+                content: " "
+                position: absolute 
+                width: 3px 
+                height: 100% 
+                left: 0
+                background: #ffcb47
+        .TabsContainer 
+            display: flex 
+            gap: 1rem
+
+            .Tab 
+                background: #ebebeb
+                padding: .7rem 1.2rem
+                font-weight: 600
+                position: relative
+
+                &::before
+                    content: " "
+                    position: absolute 
+                    width: 0%
+                    transition: .2s all ease
+                    height: 2px 
+                    background: #daa721
+                    left: 0
+                    bottom: 0
+
+                &.Active 
+                    &::before
+                        content: " "
+                        position: absolute 
+                        width: 100% 
+                        height: 2px 
+                        background: #daa721
+                        left: 0
+                        bottom: 0
+
+        .TabDesc 
+            display: grid
+            gap: .5rem
+            .Desc

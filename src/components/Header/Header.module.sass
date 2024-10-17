@@ -31,7 +31,6 @@
         .ExtendedList 
             display: grid
             align-items: center
-            gap: .5rem
             transition: .2s all ease
 
             .Content 
@@ -42,19 +41,20 @@
                 .DropdownInnitiator
                     margin-top: 7px
                     padding: 0
-                    width: 24px
-                    height: 24px
+                    width: 23px
+                    height: 23px
                     border-radius: 100px
                     display: flex 
                     justify-content: center
                     align-items: center
                     font-family: Arial, Helvetica, sans-serif
                     background: #353535
+                    transition: .2s all ease
 
                     svg 
                         transition: .2s all ease
-                        width: 6.708
-                        height: 7.274
+                        width: 8.708px
+                        height: 9.274px
 
             .Dropdown 
                 overflow: hidden
@@ -80,16 +80,19 @@
                         width: 160%
                 
                 .Dropdown 
-                    height: 200px
+                    height: 250px
                     opacity: 1
+                    margin-top: .5rem
 
                     a
                         transform: translateY(0)
 
                 .Content 
                     .DropdownInnitiator 
+                        background: #daa721
                         svg
                             transform: rotateZ(180deg)
+                            
 
             &.Inactive
                 opacity: .5
@@ -109,14 +112,14 @@
 
             &.DefInactive
                 opacity: .5
-                font-size: 24px!important
+                font-size: 25px!important
 
             &::before 
                 content: " "
                 position: absolute 
                 background: #daa721
                 left: -60%
-                width: 100%
+                width: calc(160% - 40%)
                 bottom: -7px
                 height: 2px
                 transition: .2s all ease
@@ -141,7 +144,7 @@
 
             a
                 font-family: "Geologica", sans-serif!important
-                font-size: 32px
+                font-size: 40px
                 color: #fff
                 text-decoration: none
                 position: relative 

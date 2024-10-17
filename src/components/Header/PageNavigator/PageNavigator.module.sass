@@ -1,0 +1,68 @@
+
+.PageNavigatorWrapper 
+    display: grid 
+    height: 40vh 
+    position: relative
+    
+    .SwiperSlide
+        height: 100%
+        width: 100%
+        background-position: center
+        background-size: cover
+        position: relative 
+
+        &::before 
+            content: " "
+            position: absolute
+            width: 100% 
+            height: 100%
+            background: rgba(0,0,0, .7)
+    
+
+        &.Slide0
+            background-image: url(https://i.ibb.co/Vx5Xr7M/image.png)
+
+        &.Slide1
+            background-image: url(https://i.ibb.co/hmFDzD5/image.png)
+
+        &.Slide2
+            background-image: url(https://i.ibb.co/x8vm1NX/image.png)
+
+    .NavigatorContent 
+        padding: 2rem
+        position: absolute
+        z-index: 1000
+        color: #fff
+        display: grid
+        align-content: center
+        gap: 3rem
+        height: 100%
+        width: 100%
+        padding-top: 6rem
+
+        .NavigatorPath
+            display: flex
+            gap: .5rem
+            align-items: center
+
+            .Path 
+                font-style: italic  
+                color: #fff
+                text-decoration: none
+                position: relative
+                font-size: 12px
+
+                &.Active 
+                    &::before
+                        content: " "
+                        position: absolute 
+                        width: 100% 
+                        height: 1px 
+                        background: #daa721
+                        bottom: -2px
+
+
+            svg 
+                fill: #daa721
+                width: 6px
+                margin-top: 4px

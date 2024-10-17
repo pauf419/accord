@@ -1,0 +1,95 @@
+
+.ContactsPageWrapper
+    .ContactsContent 
+        padding: 2rem
+        padding-top: 4rem
+        display: grid 
+        text-align: center
+        gap: 2rem
+        
+        .ContactsTitle 
+            h1 
+                font-size: 45px
+                margin-bottom: 2rem
+
+        img 
+            width: 100%
+
+        .Light
+            text-align: center
+            color: #616161
+
+        .Contact 
+            display: grid
+            justify-items: center
+            gap: 2rem
+
+            .Icon 
+                svg 
+                    width: 25px
+                    height: 25px
+                    fill: #daa721
+
+            strong
+                font-weight: normal
+                font-size: 20px
+                color: #8a8a8a
+
+    .ContactContainer 
+        min-height: 60vh
+        display: grid 
+        align-content: center
+        justify-items: center
+        position: relative
+        overflow: hidden
+
+        h2 
+            margin-bottom: 1rem
+
+        .Arrow 
+            z-index: 2
+            position: absolute
+            right: -20%
+            width: 150%
+            height: 100%
+            bottom: -5%
+            opacity: .9
+        
+        .ContactContext 
+            padding: 2rem 0
+            z-index: 1001
+            display: grid
+            align-content: center
+            justify-items: start
+            gap: 1rem
+
+            h1
+                font-size: 40px
+                margin-bottom: 2rem
+
+            .InputOutline 
+                backdrop-filter: blur(3px)
+                background: rgba(0,0,0, .03)
+                width: 100%
+                border: 2px solid #daa721
+                display: flex
+                align-items: center
+                gap: .5rem
+                padding: .5rem
+
+                .Icon
+                    svg 
+                        display: block
+                        width: 20px
+                        height: 20px
+                        fill: #daa721
+
+                input 
+                    outline: none
+                    background: transparent
+                    border: none
+                    width:  250px
+                    transition: .2s all ease 
+
+
+            

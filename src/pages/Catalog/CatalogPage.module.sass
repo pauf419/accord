@@ -1,0 +1,63 @@
+
+.CatalogPageWrapper
+    .CatalogContent 
+        padding: 2rem
+        padding-top: 4rem
+        display: grid 
+        gap: 2rem
+        .CatalogTitle 
+            h1 
+                font-size: 45px
+
+        .Prefix 
+            font-weight: 600 
+            position: relative
+            padding-left: .7rem
+
+            &::before 
+                content: " "
+                position: absolute 
+                width: 3px 
+                height: 100% 
+                left: 0
+                background: #ffcb47
+
+        .Img1 
+            width: 100% 
+
+            &.Active
+                transform: scale(1.5)
+
+        .List 
+            display: grid
+            gap: 1rem
+
+            .ListTitle 
+                font-size: 20px
+                font-weight: 600
+
+            .ListContent 
+                display: grid 
+                gap: .5rem
+
+                .ListItem 
+                    display: flex 
+                    align-items: center
+                    gap: .5rem
+
+                    .Dot 
+                        width: 12px 
+                        height: 12px
+                        display: block
+                        margin-top: 3px
+
+                        rect
+                            fill: #ffcb47
+                            display: block
+
+                    .Content 
+                        font-style: italic
+                        width: 100%
+
+        .Title 
+            margin-top: 2rem

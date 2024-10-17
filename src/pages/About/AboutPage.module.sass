@@ -1,0 +1,153 @@
+
+
+.AboutPageWrapper 
+    .AboutContent 
+        padding: 2rem
+        padding-top: 4rem
+        display: grid 
+        gap: 2rem
+
+        .Prefix 
+            font-weight: 600 
+            position: relative
+            padding-left: .7rem
+
+            &::before 
+                content: " "
+                position: absolute 
+                width: 3px 
+                height: 100% 
+                left: 0
+                background: #ffcb47
+
+    .HowWeWork 
+        background: #131314
+        padding: 1rem 
+        padding-top: 3rem
+        display: grid
+        justify-items: center
+        color: #fff
+        position: relative
+
+        .Title
+            font-size: 20px
+
+        .Dots
+            svg
+                width: 10px
+                height: 10px
+
+                rect 
+                    fill: #daa721
+        
+            &.DotLeftTop 
+                left: 0
+                margin-top: 20px
+                margin-left: 20px
+
+            &.DotLeftBottom 
+                left: 0
+                bottom: 0
+                margin-bottom: 20px
+                margin-left: 20px
+
+            &.DotRightTop 
+                right: 0
+                margin-top: 20px 
+                margin-right: 20px
+
+            &.DotRightBottom 
+                right: 0
+                bottom: 0
+                margin-bottom: 20px 
+                margin-right: 20px
+
+        .Content 
+            padding: 3rem
+            padding-top: 3rem
+            .Priv 
+                text-align: center
+                display: grid
+                justify-items: center
+                gap: 1rem
+                padding: 1rem
+                padding-bottom: 3rem
+
+                .Title 
+                    display: flex
+                    gap: 2px
+                    font-size: 80px
+                    color: #daa721
+
+                p
+                    text-align: center
+
+    .Questions 
+        .Title 
+            margin: 2rem
+        
+        .Content 
+            padding: 0 2rem
+            padding-bottom: 4rem
+            display: grid
+            gap: 2rem
+
+            .Dropdown 
+                overflow: hidden
+
+                .DropdownInnitiator
+                    padding: 0
+                    display: flex 
+                    align-items: center
+                    background: transparent
+                    color: #000
+                    font-size: 18px
+                    font-weight: 600
+                    border-bottom: 2px solid #daa721
+                    background: #fff
+                    padding-bottom: .5rem
+                    position: relative
+                    z-index: 999!important
+                    width: 100%
+
+                    .InnitiatorIcon
+                        color: #fff
+                        margin-top: 7px
+                        padding: 0
+                        width: 23px
+                        height: 23px
+                        border-radius: 100px
+                        display: flex 
+                        justify-content: center
+                        align-items: center
+                        font-family: Arial, Helvetica, sans-serif
+                        background: #131314
+                        transition: .2s all ease
+
+                        svg 
+                            transition: .2s all ease
+                            width: 8.708px
+                            height: 9.274px
+
+                    .InnitiatorContent 
+                        text-align: left
+                        width: 99%
+
+                
+
+                .DropdownContent 
+                    height: 0px
+                    transition: .2s all ease
+                    z-index: 998!important
+
+                &.Active 
+                    .DropdownContent 
+                        height: 150px
+                        padding: 1rem 0
+
+                    .DropdownInnitiator
+                        .InnitiatorIcon
+                            transform: rotateZ(180deg)
+                    
+
+                    
